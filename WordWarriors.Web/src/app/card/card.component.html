@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="card" [ngClass]="{'flipped': isCardFlipped}">
+    <div class="card-content front">
+      <p *ngIf="!isTextChanged">{{ englishText }}</p>
+      <p *ngIf="!isTextChanged">{{ turkishPronunciations }}</p>
+    </div>
+    <div class="card-content back">
+      <p *ngIf="isTextChanged">{{ turkishText }}</p>
+    </div>
+  </div>
+</div>
+
+<div class="btn-container">
+  <button class="btn btn-secondary" (click)="ChangeWord()">Kartı Çevir</button>
+  <button class="btn btn-secondary" (click)="GetWord()">Diğer kelime</button>
+</div>
